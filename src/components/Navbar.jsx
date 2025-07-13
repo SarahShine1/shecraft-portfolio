@@ -21,11 +21,11 @@ export default function Navbar() {
 
       {/* Center - Links */}
       <ul className="hidden md:flex gap-6 text-sm font-medium">
-        <li><a href="#" className="hover:text-twilight-pink transition">Home</a></li>
-        <li><a href="#" className="hover:text-twilight-pink transition">Services</a></li>
-        <li><a href="#" className="hover:text-twilight-pink transition">Technologies</a></li>
-        <li><a href="#" className="hover:text-twilight-pink transition">About</a></li>
-        <li><a href="#" className="hover:text-twilight-pink transition">Contact</a></li>
+        <li><a href="#Home" className="hover:text-twilight-pink transition">Home</a></li>
+        <li><a href="#services" className="hover:text-twilight-pink transition">Services</a></li>
+        <li><a href="#Technologies" className="hover:text-twilight-pink transition">Technologies</a></li>
+        <li><a href="#Team" className="hover:text-twilight-pink transition">Team</a></li>
+        <li><a href="#contact" className="hover:text-twilight-pink transition">Contact</a></li>
       </ul>
 
       {/* Right - Dark mode toggle */}
