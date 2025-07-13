@@ -8,10 +8,10 @@ export default function Footer() {
         
         {/* Column 1: Brand + Contact */}
         <div className="">
-          <h2 className="text-2xl font-bold  mb-4 bg-gradient-to-r from-twilight-violet via-twilight-pink to-twilight-haloRight
+          <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-twilight-violet via-twilight-pink to-twilight-haloRight
     bg-clip-text text-transparent">SheCraft</h2>
           <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                 At <strong className="text-white font-semibold">SheCraft</strong>, we blend code with creativity to craft elegant and purposeful digital experiences. From <strong>web development</strong> and <strong>UI/UX design</strong> to <strong>landing pages</strong>, <strong>portfolios</strong>, <strong>backend systems</strong>, and <strong>mentoring</strong>, each project is approached with precision, passion, and personality. Let’s create something extraordinary together.
+                 At <strong className="text-white font-semibold">SheCraft</strong>, we blend code with creativity to craft elegant and purposeful digital experiences. From <strong>web development</strong> and <strong>UI/UX design</strong> to <strong>landing pages</strong>, <strong>portfolios</strong>, <strong>backend systems</strong>, and <strong>mentoring</strong>, each project is approached with precision, passion, and personality. Let's create something extraordinary together.
           </p>
           
           <p className="text-sm text-gray-400 mb-1">📍 Algiers, Algeria</p>
@@ -26,45 +26,63 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Column 2: Quick Links */}
-        <div className="ml-6">
-          <h3 className="text-lg font-semibold mb-3 text-twilight-retroPeach">Quick Links</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li><ScrollLink to="home" smooth duration={500} className="cursor-pointer hover:text-white">Home</ScrollLink></li>
-            <li><ScrollLink to="services" smooth duration={500} className="cursor-pointer hover:text-white">Services</ScrollLink></li>
-            <li><ScrollLink to="Technologies" smooth duration={500} className="cursor-pointer hover:text-white">Technologies</ScrollLink></li>
-            <li><ScrollLink to="Team" smooth duration={500} className="cursor-pointer hover:text-white">Team</ScrollLink></li>
-            <li><ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-white">Contact</ScrollLink></li>
-          </ul>
-        </div>
+         {/* Mobile: Quick Links, Legal, Built With sur la même ligne */}
+          {/* Desktop: Colonnes séparées */}
+          <div className="col-span-1 lg:contents">
+            <div className="grid grid-cols-3 gap-6 lg:contents">
+              
+              {/* Column 2: Quick Links */}
+              <div className="lg:ml-6">
+                <h3 className="text-lg font-semibold mb-3 text-twilight-retroPeach">Quick Links</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li><ScrollLink to="home" smooth duration={500} className="cursor-pointer hover:text-white">Home</ScrollLink></li>
+                  <li><ScrollLink to="services" smooth duration={500} className="cursor-pointer hover:text-white">Services</ScrollLink></li>
+                  <li><ScrollLink to="Technologies" smooth duration={500} className="cursor-pointer hover:text-white">Technologies</ScrollLink></li>
+                  <li><ScrollLink to="Team" smooth duration={500} className="cursor-pointer hover:text-white">Team</ScrollLink></li>
+                  <li><ScrollLink to="contact" smooth duration={500} className="cursor-pointer hover:text-white">Contact</ScrollLink></li>
+                </ul>
+              </div>
 
-        {/* Column 3: Legal */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3 text-twilight-electricCoral">Legal</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li><a href="" className="hover:text-white">Privacy Policy</a></li>
-            <li><a href="" className="hover:text-white">Terms of Use</a></li>
-            <li><a href="" className="hover:text-white">Cookie Policy</a></li>
+              {/* Column 3: Legal */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3 text-twilight-electricCoral">Legal</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="hover:text-white" >Privacy Policy</li>
+                  <li  className="hover:text-white">Terms of Use</li>
+                  <li className="hover:text-white">Cookie Policy</li>
+                </ul>
+              </div>
 
-          </ul>
-        </div>
+              {/* Column 4: Built With */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3 text-twilight-pink">Built With 💖</h3>
+                <p className="text-sm text-gray-300">
+                  Crafted by SheCraft team using React, Tailwind CSS, Vite, and love.
+                </p>
 
-        {/* Column 4: Credit */}
-        <div>
-          <h3 className="text-lg font-semibold mb-3 text-twilight-pink">Built With 💖</h3>
-          <p className="text-sm text-gray-300">
-            Crafted by SheCraft team using <br /> React, Tailwind CSS, Vite, and love.
-          </p>
-          {/* Creative quote */}
-            <div className="items-center mt-8 p-6 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl border border-pink-400/20">
-              <p className="text-center italic text-gray-300 font-serif">
-                "Code is poetry, design is art, and together they create magic."
-              </p>
-              <p className="text-center text-sm text-orange-400 mt-2">— SheCraft Philosophy</p>
+                {/* Creative quote - Hidden on mobile, shown on desktop */}
+               <div className="items-center mt-8 p-6 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl border border-pink-400/20 hidden md:block">
+                 <p className="text-center italic text-gray-300 font-serif">
+                   "Code is poetry, design is art, and together they create magic."
+                 </p>
+                 <p className="text-center text-sm text-orange-400 mt-2">— SheCraft Philosophy</p>
+               </div>
+              </div>
             </div>
+          </div>
+        </div>
 
+
+      {/* SheCraft Philosophy - Shown only on mobile */}
+      <div className="mt-10 md:hidden">
+        <div className="items-center p-6 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl border border-pink-400/20">
+          <p className="text-center italic text-gray-300 font-serif">
+            "Code is poetry, design is art, and together they create magic."
+          </p>
+          <p className="text-center text-sm text-orange-400 mt-2">— SheCraft Philosophy</p>
         </div>
       </div>
+
 
       {/* Scroll to top */}
       <div className="mt-10 text-center">

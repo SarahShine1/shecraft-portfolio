@@ -113,7 +113,7 @@ export default function Technologies() {
   };
 
   return (
-    <section className="px-6 py-20 bg-[#0D1117] text-[#E6EDF3] overflow-hidden">
+    <section id="Technologies" className="px-6 py-20 bg-[#0D1117] text-[#E6EDF3] overflow-hidden">
       {/* Small intro badge */}
       <div className="flex justify-center mb-20">
         <div className="inline-flex items-center gap-2 px-6 py-3 bg-[#161B22] border border-[#FF6EC7] rounded-full text-[#FF6EC7] font-medium hover:bg-[#FF6EC7] hover:text-[#0D1117] transition-all duration-300 cursor-pointer">

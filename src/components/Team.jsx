@@ -1,9 +1,26 @@
 import React from "react";
 import { Sparkles } from 'lucide-react';
+import { FaLinkedinIn } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
+import { MdAlternateEmail } from "react-icons/md";
+
+
+
+const socialLinksS = [
+  { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/bouchama-sarra-480174260/" },
+  { icon: <FiGithub />, href: "https://github.com/SarahShine1" },
+  { icon: <MdAlternateEmail />, href: "https://mail.google.com/mail/?view=cm&to=ls_bouchama@esi.dz" }
+];
+
+const socialLinksH = [
+  { icon: <FaLinkedinIn /> , href: "https://www.linkedin.com/in/hadil-boukari-7b6346255/" },
+  { icon: <FiGithub />, href: "https://github.com/hadilbkr" },
+  { icon: <MdAlternateEmail />, href: "https://mail.google.com/mail/?view=cm&to=hadilboukari03@gmail.com" }
+];
 
 const Team = () => {
   return (
-    <section className="relative min-h-screen px-5 py-20 bg-[#0D1117] text-[#E6EDF3] font-serif overflow-x-hidden">
+    <section id="Team" className="relative min-h-screen px-5 py-20 bg-[#0D1117] text-[#E6EDF3] font-serif overflow-x-hidden">
       {/* Background Gaming Effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-r from-pink-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -90,10 +107,12 @@ const Team = () => {
               </div>
               
               <div className="flex justify-center gap-4">
-                {["in", "GH", "@"].map((icon, i) => (
+                {socialLinksS.map(({ icon, href }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#FF6EC7] to-[#A972FF] text-[#0D1117] font-bold text-lg rounded-full transition-all transform hover:scale-110 hover:shadow-[0_0_25px_rgba(255,110,199,0.8)] hover:animate-pulse"
                   >
                     {icon}
@@ -103,7 +122,7 @@ const Team = () => {
             </div>
           </div>
 
-          {/* Member 2 - Khawla */}
+          {/* Member 2 - Hadil */}
           <div className="group relative bg-[#161B22] p-10 rounded-2xl border-2 border-transparent hover:border-[#00FFB3] transition-all duration-700 hover:-translate-y-3 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,255,179,0.6),_0_0_80px_rgba(46,241,214,0.4),_0_0_120px_rgba(62,224,255,0.3)] transform-gpu">
             
             {/* Gaming Corner Elements */}
@@ -119,18 +138,18 @@ const Team = () => {
             <div className="relative z-10">
               <div className="text-center mb-6">
                 <div className="relative w-32 h-32 mx-auto mb-5 rounded-full bg-gradient-to-r from-[#00FFB3] to-[#2EF1D6] flex items-center justify-center text-4xl font-bold text-[#0D1117] group-hover:animate-pulse">
-                  BK
+                  BH
                   {/* Gaming Ring Effect */}
                   <div className="absolute -inset-2 rounded-full border-2 border-[#DA70D6] opacity-0 group-hover:opacity-50 group-hover:animate-ping"></div>
                   <div className="absolute -inset-4 rounded-full border border-[#FF6EC7] opacity-0 group-hover:opacity-30 group-hover:animate-spin"></div>
                 </div>
-                <h3 className="text-2xl font-semibold text-[#00FFB3] group-hover:text-[#2EF1D6] transition-colors">Bouguerra Khawla</h3>
+                <h3 className="text-2xl font-semibold text-[#00FFB3] group-hover:text-[#2EF1D6] transition-colors">Boukari Hadil</h3>
                 <p className="uppercase tracking-wide text-[#DA70D6] text-sm font-medium group-hover:text-[#FF9AC1] transition-colors">Full Stack Developer & UI/UX Designer</p>
               </div>
               
               <div className="bg-gradient-to-r from-cyan-900/20 to-teal-900/20 rounded-xl p-6 mb-6 border-l-4 border-[#00FFB3] group-hover:border-[#2EF1D6] transition-colors">
                 <p className="text-base font-sans leading-7 text-[#E6EDF3]/90">
-                  A creative problem-solver who thrives on building innovative web applications from concept to deployment. Khawla combines technical expertise with user-centered design thinking to create delightful digital products.
+                  A creative problem-solver who thrives on building innovative web applications from concept to deployment. Hadil combines technical expertise with user-centered design thinking to create delightful digital products.
                 </p>
               </div>
               
@@ -150,10 +169,12 @@ const Team = () => {
               </div>
               
               <div className="flex justify-center gap-4">
-                {["in", "GH", "@"].map((icon, i) => (
+                {socialLinksH.map(({ icon, href }, i) => (
                   <a
                     key={i}
-                    href="#"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center bg-gradient-to-r from-[#00FFB3] to-[#2EF1D6] text-[#0D1117] font-bold text-lg rounded-full transition-all transform hover:scale-110 hover:shadow-[0_0_25px_rgba(0,255,179,0.8)] hover:animate-pulse"
                   >
                     {icon}
